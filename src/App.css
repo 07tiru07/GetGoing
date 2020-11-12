@@ -6,6 +6,21 @@
   height: 40vmin;
   pointer-events: none;
 }
+main {
+  height: 100%;
+}
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+header {
+  top: 0;
+  position: fixed;
+  position: sticky;
+  z-index: 9999;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
