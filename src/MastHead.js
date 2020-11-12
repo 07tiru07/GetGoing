@@ -1,13 +1,13 @@
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { ReactComponent as MastHeadIcon } from "./SuccessIcon.svg";
+import { ReactComponent as LogoIcon } from "./g2-logo.svg";
 
 const MastHead = () => {
   return (
     <Navbar style={{ backgroundColor: "#0076ce" }} expand="lg">
       <Navbar.Brand style={{ color: "yellow" }}>
         <div style={{display: 'flex', alignItems: 'center'}}>
-          <MastHeadIcon height={20} width={20} />
+          <LogoIcon height={40} width={40} />
           &nbsp;
           <b>GetGoing</b>
         </div>

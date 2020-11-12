@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { ReactComponent as MastHeadIcon } from "./SuccessIcon.svg";
+import { ReactComponent as MastHeadIcon } from "./sports.svg";
 
 const Home = () => {
   return (
