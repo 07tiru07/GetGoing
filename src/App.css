@@ -7,14 +7,17 @@
   pointer-events: none;
 }
 main {
-  height: 100%;
+  height: calc(100% - 56px);
 }
+
 html{
   height: 100%;
 }
+
 body{
   height: 100%;
 }
+
 header {
   top: 0;
   position: fixed;
@@ -56,4 +59,96 @@ header {
   height: 90vh;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 576px) {
+
+  main {
+      top: 60px;
+  }
+  .margin-bottom-145 {
+      margin-bottom: 145px;
+  }
+  .margin-bottom-61 {
+      margin-bottom: 61px;
+  }
+  .attest-success-img {
+      order: 0;
+      margin-top: 25px;
+      margin-bottom: 25px;
+  }
+  .attest-success-pointers {
+      padding-bottom: 68px;
+  }
+  .desktop_visible_footer {
+      display: block;
+      position: fixed;
+      left: 50%;
+      bottom: 20px;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+  }
+  .dds__container-fluid {
+      flex-direction: column;
+      height: auto;
+  }
+  .container-fluid .wel-img {
+      order: 1;
+  }
+  .container-fluid .wel-header {
+      order: 0;
+      margin-top: 29px;
+      margin-bottom: 11px;
+  }
+  .dds__container-fluid .rts-para {
+      display: none;
+  }
+  .dds__container-fluid .rts-para-mobile {
+      display: block;
+      order: 2;
+      margin-bottom: 25px;
+  }
+  .privacy-copyright-mobile {
+      margin-bottom: 80px;
+      order: 3;
+  }
+  .footer-div {
+      bottom: 0;
+      background-color: white;
+      left: 0px;
+      position: fixed;
+      width: 100%;
+      padding: 16px 15px 14px 15px;
+      -webkit-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.16);
+      -moz-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.16);
+      box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.16);
+  }
+  .screening-buttons {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+}
+.screening-button-mobile {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.16);
+  padding: 16px 15px 16px 15px;
+}
+}
+
+@media only screen and (min-width: 992px) {
+  .screening-buttons-width {
+      width: 340px;
+  }
+  .ResponseButton {
+      width: 340px;
+  }
+  .search-container {
+      width: 340px;
+  }
+  .typeahead-search-container {
+      width: 340px;
+  }
 }
