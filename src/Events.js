@@ -1,6 +1,7 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import {Button, Card, Row} from "react-bootstrap";
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
+import { Button, Card, Row } from "react-bootstrap";
+import Modal from './Model.js'
 
 const cards = [
     {
@@ -33,7 +34,10 @@ const cards = [
     },
 ]
 
+
 const Events = () => {
+    const [showModal, setShowModal] = useState(false)
+
     return (
         <div className="container py-1">
             <Row>
@@ -55,12 +59,8 @@ const Events = () => {
                             <Card.Text>
                                 {"Seats left: " + card.places}
                             </Card.Text>
-
-
-                            <Link to="/events">
-                                <Button style={{marginRight: 15}}
-                                        variant="primary">Join</Button>
-                            </Link>
+                            <Button onClick={() => setShowModal(true)} style={{ marginRight: 15 }}
+                                variant="primary">Join</Button>
                             <Link to="/events">
                                 <Button
                                     variant="primary">Recommend</Button>
@@ -69,6 +69,7 @@ const Events = () => {
                     </Card>
                 </div>))}
             </Row>
+            {showModal && <Modal showModal={showModal} showModalCallback={(status) => setShowModal(status)}/>}
         </div>
     );
 };
