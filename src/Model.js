@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, InputGroup, FormControl } from "react-bootstrap";
+import { Button, Modal, InputGroup, FormControl, showModal, showModalCallback, setShowModal } from "react-bootstrap";
 
 const EventModal = (props) => {
     const { showModal, showModalCallback } = props
@@ -14,7 +14,7 @@ const EventModal = (props) => {
         <>
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Pls enter your mail id</Modal.Title>
+                    <Modal.Title>Please enter your mail id</Modal.Title>
                 </Modal.Header>
                 <Modal.Body><InputGroup className="mb-1">
                     <FormControl
@@ -36,6 +36,7 @@ const EventModal = (props) => {
             </Button>
                 </Modal.Footer>
             </Modal>
+        
         </>
     );
 }
