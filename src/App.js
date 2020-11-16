@@ -1,5 +1,6 @@
 import React from "react";
-import {MemoryRouter, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 import MastHead from "./MastHead";
 import Home from "./Home";
@@ -13,8 +14,9 @@ import UpcomingE from "./UpcomingE";
 
 import "./App.css";
 
-const App = () => (
-    <MemoryRouter>
+const App = () => {
+    return (
+    <Router>
         <MastHead/>
         <Switch>
             <Route path="/fitness">
@@ -30,6 +32,7 @@ const App = () => (
                 <Sports/>
             </Route>
             <Route path="/MJE">
+                {console.log("inside")}
                 <MJE/>
             </Route>
             <Route path="/UpcomingE">
@@ -38,11 +41,11 @@ const App = () => (
                 <Route path="/PastE">
                     <PastE/>
                 </Route>
-            <Route path="/" exact={true}>
+            <Route path="/">
                 <Home/>
             </Route>
         </Switch>
-    </MemoryRouter>
-);
+    </Router>)
+};
 
 export default App;
