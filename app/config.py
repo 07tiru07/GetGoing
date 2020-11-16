@@ -9,7 +9,7 @@ import requests
 class AppConfig():
     '''Loads configuration from PCF, or from app.dev.config when running outside PCF'''
 
-    DB_SERVER = 'sqlite:///:memory:'
+    DB_SERVER = 'sqlite:///localdb.db'
     OAUTH_DOMAIN = None
     OAUTH_CLIENT_ID = None
     OAUTH_CLIENT_SECRET = None
