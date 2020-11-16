@@ -7,9 +7,9 @@ import Fitness from "./Fitness";
 import Sports from "./Sports";
 import Events from "./Events"
 import Lessons from "./Lessons";
-import MJE from "./MJE"
-import PastE from "./PastE"
-import UpcomingE from "./UpcomingE"
+import MJE from "./MJE";
+import PastE from "./PastE";
+import UpcomingE from "./UpcomingE";
 
 import "./App.css";
 

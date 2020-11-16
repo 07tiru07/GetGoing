@@ -27,7 +27,7 @@ const MastHead = () => {
                         </Nav.Link>
                     </Link>
         <NavDropdown title="My Stuff" id="basic-nav-dropdown">
-        <NavDropdown.Item href="./MJE">My Joined Events</NavDropdown.Item><NavDropdown.Divider />
+        <NavDropdown.Item href="/MJE">My Joined Events</NavDropdown.Item><NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.2">My Created Events</NavDropdown.Item><NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.3">My Rewards</NavDropdown.Item><NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.4">My Recognition</NavDropdown.Item>
