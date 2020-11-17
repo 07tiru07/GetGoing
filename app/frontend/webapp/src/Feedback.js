@@ -17,7 +17,7 @@ const Foo =()=> {
                       style={{width: "150px"}}
                       onClick={()=>{}}
                     >
-                      Upcoming
+                      Like
                     </button>
                     <button
                       type="button"
@@ -26,7 +26,16 @@ const Foo =()=> {
                       className="btn screening-cancel-button ml-2 btn-secondary text-truncate"
                       onClick={()=>{}}
                     >
-                      Past
+                      Comment
+                    </button>
+                    <button
+                      type="button"
+                      id=""
+                      style={{width: "150px"}}
+                      className="btn screening-cancel-button ml-2 btn-secondary text-truncate"
+                      onClick={()=>{}}
+                    >
+                      Share
                     </button>
                 </div>
              <div className="">
