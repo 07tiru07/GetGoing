@@ -62,7 +62,7 @@ const Events = () => {
                             <Button onClick={() => setShowModal(true)} style={{ marginRight: 15 }}
                                 variant="primary">Join</Button>
                             <Link to="/events">
-                                <Button
+                                <Button 
                                     variant="primary">Recommend</Button>
                             </Link>
                         </Card.Body>
@@ -70,6 +70,7 @@ const Events = () => {
                 </div>))}
             </Row>
             {showModal && <Modal showModal={showModal} showModalCallback={(status) => setShowModal(status)}/>}
+
         </div>
     );
 };

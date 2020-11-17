@@ -1,40 +1,52 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 
 import MastHead from "./MastHead";
 import Home from "./Home";
 import Fitness from "./Fitness";
 import Sports from "./Sports";
-import Events from "./Events";
+import Events from "./Events"
+import Lessons from "./Lessons";
+import MJE from "./MJE";
+import PastE from "./PastE";
+import UpcomingE from "./UpcomingE";
 
 import "./App.css";
 
 const App = () => {
-  return(
-  <>
-  <Router>
-    <header>
-    <MastHead />
-    </header>
-    <main style={{height: '100%'}}>
+    return (
+    <Router>
+        <MastHead/>
         <Switch>
-          <Route path="/fitness">
-            <Fitness />
-          </Route>
-          <Route path="/sports">
-            <Sports />
-          </Route>
-          <Route path="/events">
-            <Events />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+            <Route path="/fitness">
+                <Fitness/>
+            </Route>
+            <Route path="/events">
+                <Events/>
+            </Route>
+            <Route path="/lessons">
+                <Lessons/>
+            </Route>
+            <Route path="/sports">
+                <Sports/>
+            </Route>
+            <Route path="/MJE">
+                {console.log("inside")}
+                <MJE/>
+            </Route>
+            <Route path="/UpcomingE">
+                <UpcomingE/>
+                </Route>
+                <Route path="/PastE">
+                    <PastE/>
+                </Route>
+            <Route path="/">
+                <Home/>
+            </Route>
         </Switch>
-    </main>
-  </Router>
-  </>
-  )};
+    </Router>)
+};
 
 export default App;
 

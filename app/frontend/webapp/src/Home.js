@@ -20,7 +20,7 @@ const Home = () => {
             Here you will get to learn about sports and fitness, collaborate with others in the world,
             get rewarded recognized for the hard work.
             </p>
-            <div className="screening-buttons d-sm-block">
+            <div className="screening-buttons d-sm-block">np
                   <div className="d-flex screening-buttons-width screening-button-mobile">
                     {/* <Link to={allConditionsNotAgree ? '/attestationSuccess' : '/attestationFailure'}> */}
                     <button

@@ -1,4 +1,7 @@
-import { Button, Card, Row, ButtonGroup } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
+import LModal from './LModal.js'
+import RModal from './RModal.js'
 
 const cards = [
     {
@@ -33,6 +36,8 @@ const cards = [
 
 
 const UpcomingE = () => {
+        const [showModal, setShowModal] = useState(false)
+        const [showRecoModal, setShowRecoModal] = useState(false)
 
     return (
         <div className="container py-1">
@@ -56,18 +61,20 @@ const UpcomingE = () => {
                                 {"Seats left: " + card.places}
                             </Card.Text>
                             <ButtonGroup className="mr-2" aria-label="First group">
-                            <Button 
+                            <Button onClick={() => setShowModal(true)} style={{ marginRight: 15 }} 
                                 variant="primary">Leave</Button>
                                 </ButtonGroup>
                             <ButtonGroup className="mr-2" aria-label="Second group">
-                            <Button
+                            <Button onClick={() => setShowRecoModal(true)} style={{ marginRight: 15 }} 
                                     variant="primary">Recommend Others</Button>
                                 </ButtonGroup>  
                         </Card.Body>
                     </Card>
                 </div>))}
             </Row>
-        </div>
+            {showModal && <LModal showModal={showModal} showModalCallback={(status) => setShowModal(status)}/>}
+            {showRecoModal && <RModal showModal={showRecoModal} showModalCallback={(status) => setShowRecoModal(status)}/>}
+             </div>
     );
 };
 
