@@ -61,8 +61,15 @@ header {
   display: flex;
   align-items: center;
 }
+.tiles{
+  width: 400px;
+    }
 
 @media only screen and (max-width: 576px) {
+
+  .tiles{
+width: 100%;
+  }
 
   main {
       top: 60px;
