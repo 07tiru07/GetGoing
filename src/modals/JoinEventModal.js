@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Modal, InputGroup, FormControl, showModal, showModalCallback, setShowModal} from "react-bootstrap";
+import {Button, Modal, InputGroup, FormControl} from "react-bootstrap";
 
 const JoinEventModal = (props) => {
     const {showModal, showModalCallback} = props
