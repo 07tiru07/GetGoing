@@ -1,7 +1,7 @@
 import {Navbar, Nav, NavDropdown} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {ReactComponent as LogoIcon} from "./g2-logo.svg";
-import {ReactComponent as UserIcon} from "./user.svg";
+import React from "react";
 
 const MastHead = () => {
     return (
@@ -16,25 +16,26 @@ const MastHead = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Link to="/">
-                        <Nav.Link href="/" style={{color: "white"}}>
-                            Home
-                        </Nav.Link>
-                    </Link>
-                    <Link to="/fitness">
-                        <Nav.Link href="/fitness" style={{color: "white"}}>
-                            Fitness
-                        </Nav.Link>
-                    </Link>
-        <NavDropdown title="My Stuff" id="basic-nav-dropdown">
-        <NavDropdown.Item href="/MJE">My Joined Events</NavDropdown.Item><NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.2">My Created Events</NavDropdown.Item><NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.3">My Rewards</NavDropdown.Item><NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">My Recognition</NavDropdown.Item>
-        </NavDropdown>
-        </Nav>
-        </Navbar.Collapse>
-        </Navbar>  
+                    <Nav.Link as={Link} to="/" href="/" style={{color: "white"}}>
+                        Home
+                    </Nav.Link>
+                    <Nav.Link as={Link} to="/fitness" href="/fitness" style={{color: "white"}}>
+                        Fitness
+                    </Nav.Link>
+                    <NavDropdown title={<span style={{color: "white"}}>My Stuff</span>} id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/MJE">My Joined Events</NavDropdown.Item><NavDropdown.Divider/>
+                        <NavDropdown.Item href="#action/3.2">My Created Events</NavDropdown.Item><NavDropdown.Divider/>
+                        <NavDropdown.Item href="#action/3.3">My Rewards</NavDropdown.Item><NavDropdown.Divider/>
+                        <NavDropdown.Item href="#action/3.4">My Recognition</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+                <Nav className="ml-auto">
+                    <Nav.Link as={Link} to="/register" href="/register" style={{color: "white"}}>
+                        Login
+                    </Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 };
 

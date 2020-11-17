@@ -8,6 +8,8 @@ import Fitness from "./Fitness";
 import Sports from "./Sports";
 import Events from "./Events"
 import Lessons from "./Lessons";
+import Register from "./Register";
+import Login from "./Login";
 import MJE from "./MJE";
 import PastE from "./PastE";
 import UpcomingE from "./UpcomingE";
@@ -31,8 +33,13 @@ const App = () => {
             <Route path="/sports">
                 <Sports/>
             </Route>
+            <Route path="/login">
+                <Login/>
+            </Route>
+            <Route path="/register">
+                <Register/>
+            </Route>
             <Route path="/MJE">
-                {console.log("inside")}
                 <MJE/>
             </Route>
             <Route path="/UpcomingE">

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import { Button, Card, Row } from "react-bootstrap";
-import Modal from './Model.js'
+import React, {useState} from 'react';
+import {Link} from "react-router-dom";
+import {Button, Card, Row} from "react-bootstrap";
+import JoinEventModal from './modals/JoinEventModal.js'
+import CreateEventModal from "./modals/CreateEventModal";
 
 const cards = [
     {
@@ -36,10 +37,12 @@ const cards = [
 
 
 const Events = () => {
-    const [showModal, setShowModal] = useState(false)
+    const [state, setState] = useState({joinModal: false, createModal: false})
 
     return (
         <div className="container py-1">
+            <Button onClick={() => setState({...state, createModal: true})} variant="outline-primary"
+                    className="py-3 my-3 w-100" style={{minWidth: 300}}>Create my own event</Button>
             <Row>
                 {cards.map((card, index) => (<div key={index} className="col-md-6 p-1">
                     <Card>
@@ -59,17 +62,25 @@ const Events = () => {
                             <Card.Text>
                                 {"Seats left: " + card.places}
                             </Card.Text>
-                            <Button onClick={() => setShowModal(true)} style={{ marginRight: 15 }}
-                                variant="primary">Join</Button>
+                            <Button onClick={() => setState({...state, joinModal: true})} style={{marginRight: 15}}
+                                    variant="primary">Join</Button>
                             <Link to="/events">
-                                <Button
-                                    variant="primary">Recommend</Button>
+                                <Button variant="primary">Recommend</Button>
                             </Link>
                         </Card.Body>
                     </Card>
                 </div>))}
             </Row>
-            {showModal && <Modal showModal={showModal} showModalCallback={(status) => setShowModal(status)}/>}
+
+            {state.joinModal &&
+            <JoinEventModal showModal={state.joinModal}
+                            showModalCallback={(status) => setState({...state, joinModal: status})}/>}
+
+            {state.createModal &&
+            <CreateEventModal showModal={state.createModal}
+                              showModalCallback={(status) => setState({...state, createModal: status})}
+                              saveCallback={(event) => cards.unshift(event)}
+            />}
         </div>
     );
 };
