@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Modal, } from "react-bootstrap";
-import {StarRatings, rating, setRating,}from 'react-star-ratings';
+import {StarRatings,} from 'react-star-ratings';
 
 const RatingModal = (props) => {
     const { showModal, showModalCallback } = props
     const [show, setShow] = useState(showModal);
-
+    const [rating, setRating] = useState(0);
     const handleClose = () => {
         setShow(false)
         showModalCallback(false)
