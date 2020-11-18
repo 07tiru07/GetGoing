@@ -62,11 +62,12 @@ const Events = () => {
                             <Card.Text>
                                 {"Seats left: " + card.places}
                             </Card.Text>
-                            <Button onClick={() => setState({...state, joinModal: true})} style={{marginRight: 15}}
+                            <div className="d-flex col-12 col-md-8 px-0">
+
+                            <Button className="w-50" onClick={() => setState({...state, joinModal: true})} style={{marginRight: 15}}
                                     variant="primary">Join</Button>
-                            <Link to="/events">
-                                <Button variant="primary">Recommend</Button>
-                            </Link>
+                                <Button className="w-50" variant="primary">Recommend</Button>
+                            </div>
                         </Card.Body>
                     </Card>
                 </div>))}

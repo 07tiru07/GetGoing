@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
-import LModal from './LModal.js'
-import RModal from './RModal.js'
+import LModal from './modals/LModal.js'
+import RModal from './modals/RModal.js'
 
 const cards = [
     {
@@ -62,23 +62,23 @@ const UpcomingE = () => {
                             </Card.Text>
                             <ButtonGroup className="mr-2" aria-label="First group">
                             <Button
-                            type="button" 
+                            type="button"
                             id=""
                             className="mb-2"
                              //   style={{width: "200px"}}
-                            onClick={() => setShowModal(true)} style={{ marginRight: 15 }} 
+                            onClick={() => setShowModal(true)} style={{ marginRight: 15 }}
                             variant="primary">Leave</Button>
                             </ButtonGroup>
                             <ButtonGroup className="mr-2" aria-label="Second group">
                             <Button
-                            type="button" 
+                            type="button"
                             id=""
                             className="mb-2"
                              //   style={{width: "100px"}}
                             onClick={() => setShowRecoModal(true)}
-                            style={{ marginRight: 15 }} 
+                            style={{ marginRight: 15 }}
                             variant="primary">Recommend</Button>
-                                </ButtonGroup>  
+                                </ButtonGroup>
                         </Card.Body>
                     </Card>
                 </div>))}

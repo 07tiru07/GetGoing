@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
-import CommentModal from './CommentModal.js'
-import RatingModal from './RatingModal.js'
+import CommentModal from './modals/CommentModal.js'
+import RatingModal from './modals/RatingModal.js'
 
 const cards = [
     {
@@ -11,14 +11,14 @@ const cards = [
         location: "xyz",
         places: "123",
     },
-    
+
     {
     title: "Event Name",
     date: "xx/xx/20xx",
     mode: "online/offline",
     location: "xyz",
-    places: "123", 
-        
+    places: "123",
+
     },
 
     {
@@ -65,13 +65,13 @@ const PastCE = () => {
                                 {"Seats left: " + card.places}
                             </Card.Text>
                             <ButtonGroup className="mr-2" aria-label="First group">
-                            <Button onClick={() => setShowCommentModal(true)} style={{ marginRight: 15 }} 
+                            <Button onClick={() => setShowCommentModal(true)} style={{ marginRight: 15 }}
                                 variant="primary">See Comments</Button>
                                 </ButtonGroup>
                             <ButtonGroup className="mr-2" aria-label="Second group">
-                            <Button onClick={() => setShowRatingModal(true)} style={{ marginRight: 15 }} 
+                            <Button onClick={() => setShowRatingModal(true)} style={{ marginRight: 15 }}
                                     variant="primary">See Ratings</Button>
-                                </ButtonGroup>  
+                                </ButtonGroup>
                         </Card.Body>
                     </Card>
                 </div>))}

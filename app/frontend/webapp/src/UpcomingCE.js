@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
-import CModal from './CModal.js'
-import InviteModal from './InviteModal.js'
+import CModal from './modals/CModal.js'
+import InviteModal from './modals/InviteModal.js'
 
 const cards = [
     {
@@ -11,14 +11,14 @@ const cards = [
         location: "xyz",
         places: "123",
     },
-    
+
     {
     title: "Event Name",
     date: "xx/xx/20xx",
     mode: "online/offline",
     location: "xyz",
-    places: "123", 
-        
+    places: "123",
+
     },
 
     {
@@ -65,13 +65,13 @@ const UpcomingCE = () => {
                                 {"Seats left: " + card.places}
                             </Card.Text>
                             <ButtonGroup className="mr-2" aria-label="First group">
-                            <Button onClick={() => setShowCModal(true)} style={{ marginRight: 15 }} 
+                            <Button onClick={() => setShowCModal(true)} style={{ marginRight: 15 }}
                                 variant="primary">Cancel</Button>
                                 </ButtonGroup>
                             <ButtonGroup className="mr-2" aria-label="Second group">
-                            <Button onClick={() => setShowInviteModal(true)} style={{ marginRight: 15 }} 
+                            <Button onClick={() => setShowInviteModal(true)} style={{ marginRight: 15 }}
                                     variant="primary">Invite Others</Button>
-                                </ButtonGroup>  
+                                </ButtonGroup>
                         </Card.Body>
                     </Card>
                 </div>))}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
-import Comment2Modal from './Comment2Modal.js'
+import Comment2Modal from './modals/Comment2Modal.js'
 import Rating2Modal from './Rating2Modal.js'
 
 
@@ -8,22 +8,22 @@ const cards = [
     {
         title: "Event Name",
         date: "01/01/2020",
-        
+
     },
     {
         title: "Event Name",
         date: "02/02/2020",
-        
+
     },
     {
         title: "Event Name",
         date: "03/03/2020",
-        
+
     },
     {
         title: "Event Name",
         date: "05/04/2020",
-        
+
     },
 ]
 
@@ -31,7 +31,7 @@ const cards = [
 const PastE = () => {
         const [showComment2Modal, setShowComment2Modal] = useState(false)
         const [showRating2Modal, setShowRating2Modal] = useState(false)
-        
+
 
     return (
         <div className="container py-1">
@@ -46,7 +46,7 @@ const PastE = () => {
                                 {"Date: " + card.date}
                             </Card.Text>
             <h4>How helpful it was?</h4>
-              
+
               <div className="col-12 d-flex py-3">
               <button
                       type="button"
@@ -66,7 +66,7 @@ const PastE = () => {
                     >
                       Rate
                     </button>
-              </div> 
+              </div>
                         </Card.Body>
                     </Card>
                 </div>))}
@@ -78,5 +78,4 @@ const PastE = () => {
 };
 
 export default PastE;
-    
-    
+
