@@ -1,4 +1,4 @@
-import {Button, Card, Container, Row} from "react-bootstrap";
+import {Card, Container, Row} from "react-bootstrap";
 import React from "react";
 import gymImg from './gym.jpg'
 import sportImg from './sport.jpeg'
