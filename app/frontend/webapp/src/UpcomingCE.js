@@ -36,7 +36,7 @@ const cards = [
 
 
 const UpcomingCE = () => {
-        const [showModal, setShowCModal] = useState(false)
+        const [showCModal, setShowCModal] = useState(false)
         const [showRecoModal, setShowRecoModal] = useState(false)
 
     return (
@@ -66,7 +66,7 @@ const UpcomingCE = () => {
                                 </ButtonGroup>
                             <ButtonGroup className="mr-2" aria-label="Second group">
                             <Button onClick={() => setShowRecoModal(true)} style={{ marginRight: 15 }} 
-                                    variant="primary">Recommend Others</Button>
+                                    variant="primary">Invite Others</Button>
                                 </ButtonGroup>  
                         </Card.Body>
                     </Card>

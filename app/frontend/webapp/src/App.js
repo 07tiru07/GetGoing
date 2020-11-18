@@ -9,8 +9,12 @@ import Sports from "./Sports";
 import Events from "./Events"
 import Lessons from "./Lessons";
 import MJE from "./MJE";
+import MCE from "./MCE";
+import UpcomingCE from "./UpcomingCE";
+import PastCE from "./PastCE";
 import PastE from "./PastE";
 import UpcomingE from "./UpcomingE";
+import Feedback from "./Feedback";
 
 import "./App.css";
 
@@ -41,8 +45,20 @@ const App = () => {
                 <Route path="/PastE">
                     <PastE/>
                 </Route>
+                <Route path="/UpcomingCE">
+                <UpcomingCE/>
+            </Route>
+            <Route path="/PastCE">
+                <PastCE/>
+            </Route>
+            <Route path="/MCE">
+                <MCE/>
+            </Route>
             <Route path="/">
                 <Home/>
+            </Route>
+            <Route path="/Feedback">
+                <Feedback/>
             </Route>
         </Switch>
     </Router>)
