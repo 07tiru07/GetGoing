@@ -36,6 +36,9 @@ const App = () => {
             <Route path="/sports">
                 <Sports/>
             </Route>
+            <Route path="/download">
+                <Download/>
+            </Route>
             <Route path="/MJE">
                 {console.log("inside")}
                 <MJE/>
