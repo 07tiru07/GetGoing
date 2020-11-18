@@ -1,13 +1,19 @@
-import React, {useHi} from "react";
+import React, {useState} from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {ReactComponent as WelcomeImg} from "./tst.svg";
 import { useHistory } from 'react-router-dom';
 import './App.css';
+import Cookies from 'js-cookie';
+import Comment2Modal from './modals/WelcomePopup'
 
 
 const Home = () => {
   const history = useHistory();
+  // const [showComment2Modal, setShowComment2Modal] = useState(true);
+  const [showComment2Modal, setShowComment2Modal] = useState(Cookies.get('watched') || '');
+
     return (
+      <>
         <div>
             <div className="d-sm-flex vertical-center-container">
             <div className="col-0 col-sm-1"></div>
@@ -49,6 +55,11 @@ const Home = () => {
           <div className="col-0 col-sm-1"></div>
             </div>
         </div>
+        {console.log("jhkk",Cookies.get('watched') === '')}
+        {Cookies.get('watched') === 'true' &&
+          <Comment2Modal showModal={true} showModalCallback={(status) => {
+          Cookies.set('watched',false)}}/>}
+          </>
     );
 };
 

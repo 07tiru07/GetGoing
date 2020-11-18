@@ -2,8 +2,11 @@ import React from 'react';
 import {Form, Button, Container} from "react-bootstrap";
 import {ReactComponent as LogoIcon} from "./g2-logo.svg";
 import {Link} from "react-router-dom";
+import Cookies from 'js-cookie';
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
+    const history = useHistory();
     return (
         <Container className={"d-flex align-items-center justify-content-center flex-column h-100"} style={{marginTop: 100}}>
             <LogoIcon height={70} width={70} className={"mb-4"}/>
@@ -19,11 +22,11 @@ const Login = () => {
                     <Form.Control type="password" placeholder="Password"/>
                 </Form.Group>
 
-                <Link to="/">
-                    <Button style={{minWidth: 300, backgroundColor: "#0076ce"}} variant="primary" type="submit">
+                    <Button  onClick={()=>{
+                        Cookies.set('watched',true)
+                        history.push('/')}} style={{minWidth: 300, backgroundColor: "#0076ce"}} variant="primary" type="submit">
                         Log in
                     </Button>
-                </Link>
 
                 <Link to="/">
                     <h6 style={{color: "#000000", marginTop: 20, textAlign: "center"}}>
