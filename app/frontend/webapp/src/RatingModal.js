@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, } from "react-boonptstrap";
+import { Button, Modal, } from "react-bootstrap";
 import {StarRatings, rating, setRating,}from 'react-star-ratings';
 
 const RatingModal = (props) => {

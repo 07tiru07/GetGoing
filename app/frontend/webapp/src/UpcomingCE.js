@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
 import CModal from './CModal.js'
-import RModal from './RModal.js'
+import InviteModal from './InviteModal.js'
 
 const cards = [
     {
@@ -37,7 +37,7 @@ const cards = [
 
 const UpcomingCE = () => {
         const [showCModal, setShowCModal] = useState(false)
-        const [showRecoModal, setShowRecoModal] = useState(false)
+        const [showInviteModal, setShowInviteModal] = useState(false)
 
     return (
         <div className="container py-1">
@@ -65,7 +65,7 @@ const UpcomingCE = () => {
                                 variant="primary">Cancel</Button>
                                 </ButtonGroup>
                             <ButtonGroup className="mr-2" aria-label="Second group">
-                            <Button onClick={() => setShowRecoModal(true)} style={{ marginRight: 15 }} 
+                            <Button onClick={() => setShowInviteModal(true)} style={{ marginRight: 15 }} 
                                     variant="primary">Invite Others</Button>
                                 </ButtonGroup>  
                         </Card.Body>
@@ -73,7 +73,7 @@ const UpcomingCE = () => {
                 </div>))}
             </Row>
             {showCModal && <CModal showModal={showCModal} showModalCallback={(status) => setShowCModal(status)}/>}
-            {showRecoModal && <RModal showModal={showRecoModal} showModalCallback={(status) => setShowRecoModal(status)}/>}
+            {showInviteModal && <InviteModal showModal={showInviteModal} showModalCallback={(status) => setShowInviteModal(status)}/>}
              </div>
     );
 };

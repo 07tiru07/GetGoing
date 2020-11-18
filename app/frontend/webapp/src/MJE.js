@@ -10,7 +10,7 @@ const MJE = () => {
 <Button href="/UpcomingE">Upcoming</Button>
   </ButtonGroup>
   <ButtonGroup className="mr-2" aria-label="Second group">
-  <Button href="/Feedback">Past</Button>
+  <Button href="/PastE">Past</Button>
   </ButtonGroup>
 </div>
    );
