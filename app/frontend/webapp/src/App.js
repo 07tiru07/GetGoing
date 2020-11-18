@@ -16,6 +16,7 @@ import PastE from "./PastE";
 import UpcomingE from "./UpcomingE";
 import Feedback from "./Feedback";
 import recognise from "./recognise";
+import Download from "./Dummy";
 
 import "./App.css";
 

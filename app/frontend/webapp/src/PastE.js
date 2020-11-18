@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
 import Comment2Modal from './Comment2Modal.js'
-import Rating2Modal from './Rating2Modal.js'
+// import Rating2Modal from './Rating2Modal.js'
 
 const cards = [
     {
@@ -61,23 +61,22 @@ const PastCE = () => {
                                 {"Seats left: " + card.places}
                             </Card.Text>
                             <ButtonGroup className="mr-2" aria-label="First group">
-                            <Button onClick={() => setShowComment2Modal(true)} style={{ marginRight: 15 }} 
+                            <Button onClick={() => setShowComment2Modal(true)} style={{ marginRight: 15 }}
                                 variant="primary">Comment</Button>
                                 </ButtonGroup>
                             <ButtonGroup className="mr-2" aria-label="Second group">
-                            <Button onClick={() => setShowRating2Modal(true)} style={{ marginRight: 15 }} 
+                            <Button onClick={() => setShowRating2Modal(true)} style={{ marginRight: 15 }}
                                     variant="primary">Rate</Button>
-                                </ButtonGroup>  
+                                </ButtonGroup>
                         </Card.Body>
                     </Card>
                 </div>))}
             </Row>
             {showComment2Modal && <Comment2Modal showModal={showComment2Modal} showModalCallback={(status) => setShowComment2Modal(status)}/>}
-            {showRating2Modal && <Rating2Modal showModal={showRating2Modal} showModalCallback={(status) => setShowRating2Modal(status)}/>}
+            {/* {showRating2Modal && <Rating2Modal showModal={showRating2Modal} showModalCallback={(status) => setShowRating2Modal(status)}/>} */}
              </div>
     );
 };
 
 export default PastCE;
-    
-    
+
