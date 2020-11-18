@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
-import {Button, Card, Row} from "react-bootstrap";
-import JoinEventModal from './modals/JoinEventModal.js'
-import CreateEventModal from "./modals/CreateEventModal";
+import {Button, Card, Row, ButtonGroup,} from "react-bootstrap";
+import LModal from './modals/LModal.js'
+import RModal from './modals/RModal.js'
 
 const cards = [
     {
@@ -35,14 +34,12 @@ const cards = [
     },
 ]
 
-
-const Events = () => {
-    const [state, setState] = useState({joinModal: false, createModal: false})
+const UpcomingEvents = () => {
+    const [showModal, setShowModal] = useState(false)
+    const [showRecoModal, setShowRecoModal] = useState(false)
 
     return (
         <div className="container py-1">
-            <Button onClick={() => setState({...state, createModal: true})} variant="outline-primary"
-                    className="py-3 my-3 w-100" style={{minWidth: 300}}>Create my own event</Button>
             <Row>
                 {cards.map((card, index) => (<div key={index} className="col-md-6 p-1">
                     <Card>
@@ -62,27 +59,23 @@ const Events = () => {
                             <Card.Text>
                                 {"Seats left: " + card.places}
                             </Card.Text>
-                            <Button onClick={() => setState({...state, joinModal: true})} style={{marginRight: 15}}
-                                    variant="primary">Join</Button>
-                            <Link to="/events">
-                                <Button variant="primary">Recommend</Button>
-                            </Link>
+                            <ButtonGroup className="mr-2" aria-label="First group">
+                                <Button onClick={() => setShowModal(true)} style={{marginRight: 15}}
+                                        variant="primary">Leave</Button>
+                            </ButtonGroup>
+                            <ButtonGroup className="mr-2" aria-label="Second group">
+                                <Button onClick={() => setShowRecoModal(true)} style={{marginRight: 15}}
+                                        variant="primary">Recommend Others</Button>
+                            </ButtonGroup>
                         </Card.Body>
                     </Card>
                 </div>))}
             </Row>
-
-            {state.joinModal &&
-            <JoinEventModal showModal={state.joinModal}
-                            showModalCallback={(status) => setState({...state, joinModal: status})}/>}
-
-            {state.createModal &&
-            <CreateEventModal showModal={state.createModal}
-                              showModalCallback={(status) => setState({...state, createModal: status})}
-                              saveCallback={(event) => cards.unshift(event)}
-            />}
+            {showModal && <LModal showModal={showModal} showModalCallback={(status) => setShowModal(status)}/>}
+            {showRecoModal &&
+            <RModal showModal={showRecoModal} showModalCallback={(status) => setShowRecoModal(status)}/>}
         </div>
     );
 };
 
-export default Events;
+export default UpcomingEvents;

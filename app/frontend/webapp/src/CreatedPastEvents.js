@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
-import {Button, Card, Row} from "react-bootstrap";
-import JoinEventModal from './modals/JoinEventModal.js'
-import CreateEventModal from "./modals/CreateEventModal";
+import {Button, Card, Row, ButtonGroup,} from "react-bootstrap";
+import CommentModal from './modals/CommentModal.js'
+import RatingModal from './modals/RatingModal.js'
 
 const cards = [
     {
@@ -36,13 +35,12 @@ const cards = [
 ]
 
 
-const Events = () => {
-    const [state, setState] = useState({joinModal: false, createModal: false})
+const CreatedPastEvents = () => {
+    const [showCommentModal, setShowCommentModal] = useState(false)
+    const [showRatingModal, setShowRatingModal] = useState(false)
 
     return (
         <div className="container py-1">
-            <Button onClick={() => setState({...state, createModal: true})} variant="outline-primary"
-                    className="py-3 my-3 w-100" style={{minWidth: 300}}>Create my own event</Button>
             <Row>
                 {cards.map((card, index) => (<div key={index} className="col-md-6 p-1">
                     <Card>
@@ -62,27 +60,24 @@ const Events = () => {
                             <Card.Text>
                                 {"Seats left: " + card.places}
                             </Card.Text>
-                            <Button onClick={() => setState({...state, joinModal: true})} style={{marginRight: 15}}
-                                    variant="primary">Join</Button>
-                            <Link to="/events">
-                                <Button variant="primary">Recommend</Button>
-                            </Link>
+                            <ButtonGroup className="mr-2" aria-label="First group">
+                                <Button onClick={() => setShowCommentModal(true)} style={{marginRight: 15}}
+                                        variant="primary">See Comments</Button>
+                            </ButtonGroup>
+                            <ButtonGroup className="mr-2" aria-label="Second group">
+                                <Button style={{marginRight: 15}}
+                                        variant="primary">See Ratings</Button>
+                            </ButtonGroup>
                         </Card.Body>
                     </Card>
                 </div>))}
             </Row>
-
-            {state.joinModal &&
-            <JoinEventModal showModal={state.joinModal}
-                            showModalCallback={(status) => setState({...state, joinModal: status})}/>}
-
-            {state.createModal &&
-            <CreateEventModal showModal={state.createModal}
-                              showModalCallback={(status) => setState({...state, createModal: status})}
-                              saveCallback={(event) => cards.unshift(event)}
-            />}
+            {showCommentModal &&
+            <CommentModal showModal={showCommentModal} showModalCallback={(status) => setShowCommentModal(status)}/>}
+            {showRatingModal &&
+            <RatingModal showModal={showRatingModal} showModalCallback={(status) => setShowRatingModal(status)}/>}
         </div>
     );
 };
 
-export default Events;
+export default CreatedPastEvents;
