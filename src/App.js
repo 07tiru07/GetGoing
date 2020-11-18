@@ -1,7 +1,6 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-
 import MastHead from "./MastHead";
 import Home from "./Home";
 import Fitness from "./Fitness";
@@ -10,11 +9,13 @@ import Events from "./Events"
 import Lessons from "./Lessons";
 import Register from "./Register";
 import Login from "./Login";
-import MJE from "./MJE";
-import PastE from "./PastE";
-import UpcomingE from "./UpcomingE";
+import Coupons from "./Coupons";
 
 import "./App.css";
+import JoinedEvents from "./JoinedEvents";
+import CreatedEvents from "./CreatedEvents";
+import Rewards from "./Rewards";
+import SportProducts from "./SportProducts";
 
 const App = () => {
     return (
@@ -39,14 +40,20 @@ const App = () => {
                 <Route path="/register">
                     <Register/>
                 </Route>
-                <Route path="/MJE">
-                    <MJE/>
+                <Route path="/rewards">
+                    <Rewards/>
                 </Route>
-                <Route path="/UpcomingE">
-                    <UpcomingE/>
+                <Route path="/created_events">
+                    <CreatedEvents/>
                 </Route>
-                <Route path="/PastE">
-                    <PastE/>
+                <Route path="/joined_events">
+                    <JoinedEvents/>
+                </Route>
+                <Route path="/sports_products">
+                    <SportProducts/>
+                </Route>
+                <Route path="/coupons">
+                    <Coupons/>
                 </Route>
                 <Route path="/">
                     <Home/>

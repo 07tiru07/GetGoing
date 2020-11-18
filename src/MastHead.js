@@ -23,9 +23,9 @@ const MastHead = () => {
                         Fitness
                     </Nav.Link>
                     <NavDropdown title={<span style={{color: "white"}}>My Stuff</span>} id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/MJE">My Joined Events</NavDropdown.Item><NavDropdown.Divider/>
-                        <NavDropdown.Item href="#action/3.2">My Created Events</NavDropdown.Item><NavDropdown.Divider/>
-                        <NavDropdown.Item href="#action/3.3">My Rewards</NavDropdown.Item><NavDropdown.Divider/>
+                        <NavDropdown.Item href="/joined_events">My Joined Events</NavDropdown.Item><NavDropdown.Divider/>
+                        <NavDropdown.Item href="/created_events">My Created Events</NavDropdown.Item><NavDropdown.Divider/>
+                        <NavDropdown.Item href="/rewards">My Rewards</NavDropdown.Item><NavDropdown.Divider/>
                         <NavDropdown.Item href="#action/3.4">My Recognition</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
