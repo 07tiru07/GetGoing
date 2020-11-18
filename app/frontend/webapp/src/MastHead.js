@@ -30,7 +30,7 @@ const MastHead = () => {
         <NavDropdown.Item href="/MJE">My Joined Events</NavDropdown.Item><NavDropdown.Divider />
         <NavDropdown.Item href="/MCE">My Created Events</NavDropdown.Item><NavDropdown.Divider />
         <NavDropdown.Item href="#action/3.3">My Rewards</NavDropdown.Item><NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">My Recognition</NavDropdown.Item>
+        <NavDropdown.Item href="/recognise">My Recognition</NavDropdown.Item>
         </NavDropdown>
         </Nav>
         </Navbar.Collapse>

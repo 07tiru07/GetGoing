@@ -15,6 +15,7 @@ import PastCE from "./PastCE";
 import PastE from "./PastE";
 import UpcomingE from "./UpcomingE";
 import Feedback from "./Feedback";
+import recognise from "./recognise";
 
 import "./App.css";
 
@@ -59,6 +60,9 @@ const App = () => {
             </Route>
             <Route path="/Feedback">
                 <Feedback/>
+            </Route>
+            <Route path="/recognise">
+                <recognise/>
             </Route>
         </Switch>
     </Router>)
