@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 const Login = () => {
     return (
-        <Container className={"d-flex align-items-center justify-content-center flex-column h-100"}>
+        <Container className={"d-flex align-items-center justify-content-center flex-column h-100"} style={{marginTop: 100}}>
             <LogoIcon height={70} width={70} className={"mb-4"}/>
             <h2 style={{marginBottom: 20}}>
                 Log in to see more
