@@ -59,14 +59,24 @@ const UpcomingEvents = () => {
                             <Card.Text>
                                 {"Seats left: " + card.places}
                             </Card.Text>
-                            <ButtonGroup className="mr-2" aria-label="First group">
-                                <Button onClick={() => setShowModal(true)} style={{marginRight: 15}}
-                                        variant="primary">Leave</Button>
-                            </ButtonGroup>
-                            <ButtonGroup className="mr-2" aria-label="Second group">
-                                <Button onClick={() => setShowRecoModal(true)} style={{marginRight: 15}}
-                                        variant="primary">Recommend Others</Button>
-                            </ButtonGroup>
+    <div className="col-12 px-0 col-sm-3 d-flex py-3">
+                   <button
+                      type="button"
+                      id=""
+                      className="btn w-50 btn-primary"
+                      onClick={() => setShowModal(true)} style={{marginRight: 15}}
+                    >
+                      Leave
+                    </button>
+                    <button
+                      type="button"
+                      id=""
+                      className="btn screening-cancel-button w-50 ml-2 btn-secondary"
+                      onClick={() => setShowRecoModal(true)} style={{marginRight: 15}}
+                    >
+                      Recommend
+                    </button>
+    </div>
                         </Card.Body>
                     </Card>
                 </div>))}

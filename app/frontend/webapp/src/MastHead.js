@@ -19,9 +19,12 @@ const MastHead = () => {
                     <Nav.Link as={Link} to="/" href="/" style={{color: "white"}}>
                         Home
                     </Nav.Link>
-                    <Nav.Link as={Link} to="/fitness" href="/fitness" style={{color: "white"}}>
-                        Fitness
+                    <Nav.Link as={Link} to="/sports" href="/sports" style={{color: "white"}}>
+                        Sports
                     </Nav.Link>
+                    <NavDropdown title={<span style={{color: "white"}}>Fitness</span>} id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/joined_events">Yoga</NavDropdown.Item>   
+                    </NavDropdown>
                     <NavDropdown title={<span style={{color: "white"}}>My Stuff</span>} id="basic-nav-dropdown">
                         <NavDropdown.Item href="/joined_events">My Joined Events</NavDropdown.Item><NavDropdown.Divider/>
                         <NavDropdown.Item href="/created_events">My Created Events</NavDropdown.Item><NavDropdown.Divider/>

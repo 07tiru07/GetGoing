@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
-import Comment2Modal from './modals/Comment2Modal.js'
-import Rating2Modal from './Rating2Modal.js'
+import { Button, Card, Row,InputGroup,} from "react-bootstrap";
+import StarRatings from 'react-star-ratings';
+import Comment2Modal from './modals/Comment2Modal.js';
+import PastJoinedShareModal from './PastJoinedShareModal.';
+
 
 
 const cards = [
@@ -30,7 +32,8 @@ const cards = [
 
 const PastE = () => {
         const [showComment2Modal, setShowComment2Modal] = useState(false)
-        const [showRating2Modal, setShowRating2Modal] = useState(false)
+        const [showPastJoinedShareModal, setShowPastJoinedShareModal] = useState(false)
+        const [rating, setRating] = useState(0);
 
 
     return (
@@ -46,6 +49,16 @@ const PastE = () => {
                                 {"Date: " + card.date}
                             </Card.Text>
             <h4>How helpful it was?</h4>
+            <InputGroup className="mb-1">
+                <StarRatings
+                rating={rating}
+                starRatedColor="blue"
+                changeRating={(e)=>{setRating(e)}}
+                numberOfStars={5}
+                name='rating'
+              />
+                </InputGroup>
+
 
               <div className="col-12 d-flex py-3">
               <button
@@ -57,22 +70,23 @@ const PastE = () => {
                     >
                       Comment
                     </button>
-              <button
+                    <button
                       type="button"
                       id=""
-                      className="btn w-33 ml-2 btn-primary text-truncate"
+                      className="btn w-33 btn-primary text-truncate"
                     //   style={{width: "100px"}}
-                    onClick={() => setShowRating2Modal(true)} style={{ marginRight: 15 }}
+                    onClick={() => setShowPastJoinedShareModal(true)} style={{ marginRight: 15 }}
                     >
-                      Rate
+                      Share
                     </button>
+                    
               </div>
                         </Card.Body>
                     </Card>
                 </div>))}
             </Row>
             {showComment2Modal && <Comment2Modal showModal={showComment2Modal} showModalCallback={(status) => setShowComment2Modal(status)}/>}
-            {showRating2Modal && <Rating2Modal showModal={showRating2Modal} showModalCallback={(status) => setShowRating2Modal(status)}/>}
+            {showPastJoinedShareModal && <PastJoinedShareModal showModal={showPastJoinedShareModal} showModalCallback={(status) => setShowPastJoinedShareModal(status)}/>}
              </div>
     );
 };
