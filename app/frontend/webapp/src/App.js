@@ -12,12 +12,14 @@ import Coupons from "./Coupons";
 import JoinedEvents from "./MJE";
 import CreatedEvents from "./MCE";
 import Rewards from "./Rewards";
+import Recognise from "./recognise"
 import SportProducts from "./SportProducts";
 import UpcomingEvents from "./UpcomingEvents";
 import PastEvents from "./PastEvents";
 import "./App.css";
 import CreatedUpcomingEvents from "./CreatedUpcomingEvents";
 import CreatedPastEvents from "./CreatedPastEvents";
+import fitness_yoga from "./fitness_yoga";
 
 const App = () => {
     return (
@@ -45,6 +47,9 @@ const App = () => {
                 <Route path="/rewards">
                     <Rewards/>
                 </Route>
+                <Route path="/recognise">
+                    <Recognise/>
+                </Route>
                 <Route path="/created_events">
                     <CreatedEvents/>
                 </Route>
@@ -71,6 +76,9 @@ const App = () => {
                 </Route>
                 <Route path="/">
                     <Home/>
+                </Route>
+                <Route path="/fitness_yoga">
+                    <fitness_yoga/>
                 </Route>
             </Switch>
         </Router>)

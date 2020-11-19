@@ -23,13 +23,13 @@ const MastHead = () => {
                         Sports
                     </Nav.Link>
                     <NavDropdown title={<span style={{color: "white"}}>Fitness</span>} id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/joined_events">Yoga</NavDropdown.Item>   
+                        <NavDropdown.Item href="/fitness_yoga">Yoga</NavDropdown.Item>   
                     </NavDropdown>
                     <NavDropdown title={<span style={{color: "white"}}>My Stuff</span>} id="basic-nav-dropdown">
                         <NavDropdown.Item href="/joined_events">My Joined Events</NavDropdown.Item><NavDropdown.Divider/>
                         <NavDropdown.Item href="/created_events">My Created Events</NavDropdown.Item><NavDropdown.Divider/>
                         <NavDropdown.Item href="/rewards">My Rewards</NavDropdown.Item><NavDropdown.Divider/>
-                        <NavDropdown.Item href="#action/3.4">My Recognition</NavDropdown.Item>
+                        <NavDropdown.Item href="/recognise">My Recognition</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
                 <Nav className="ml-auto">

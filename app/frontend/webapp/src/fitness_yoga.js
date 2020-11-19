@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import Events from'./events_yoga';
-import Learn from './learn_yoga';
+import Learn from './learn_yoga.js';
 
 const yoga = () => {
-    console.log("yoga")
+   
     const [past, setPast]  = useState(false);
     return (
 <div className="container">
@@ -27,7 +27,6 @@ const yoga = () => {
                     </button>
     </div>
     <div className="pt-3">
-
   {past && <Events/>}
   {!past && <Learn/>}
     </div>
