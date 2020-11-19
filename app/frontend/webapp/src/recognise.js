@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Button, Container, Row,Col,Alert, ButtonGroup, ButtonToolbar} from "react-bootstrap";
+import Image from 'react-bootstrap/Image'
 import ShareModal from './smodal.js'
 
 const Recognise = () => {
@@ -47,11 +48,12 @@ const Recognise = () => {
                        </Row>
                        <Row>
                        <Col sm ={1}> </Col>
-                       <Col sm={5}>git
-                       <img src="hyz.png" alt = "here are your certificates"/></Col>
+                       <Col sm={5}>
+                       <Image src="hyz.svg/100px250" alt= "Here are your certificates" fluid/>g
+                       </Col>
                        <Col sm ={1} ></Col>
                         <Col sm ={5}>
-                            <img src="hyz.png" alt= "here are your certificates"/>
+                        <Image src="hyz.svg/100px250" alt= "Here are your certificates" fluid/> 
                         </Col>
                        </Row>
                        <Row>

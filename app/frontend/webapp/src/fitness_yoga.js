@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import Events from'./events_yoga';
+import React from 'react';
+import Events from'./events_yoga.js';
 import Learn from './learn_yoga.js';
 
 const yoga = () => {
    
-    const [past, setPast]  = useState(false);
+    const [past, setPast]  =(false);
     return (
 <div className="container">
     <h1>Yoga</h1>

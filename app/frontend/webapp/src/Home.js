@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {Container, Row, Col} from "react-bootstrap";
 import {ReactComponent as WelcomeImg} from "./tst.svg";
 import { useHistory } from 'react-router-dom';
 import './App.css';

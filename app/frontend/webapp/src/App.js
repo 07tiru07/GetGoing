@@ -32,6 +32,9 @@ const App = () => {
                 <Route path="/events">
                     <Events/>
                 </Route>
+                <Route path="/fitness_yoga">
+                    <fitness_yoga/>
+                </Route>
                 <Route path="/lessons">
                     <Lessons/>
                 </Route>
@@ -76,9 +79,6 @@ const App = () => {
                 </Route>
                 <Route path="/">
                     <Home/>
-                </Route>
-                <Route path="/fitness_yoga">
-                    <fitness_yoga/>
                 </Route>
             </Switch>
         </Router>)
