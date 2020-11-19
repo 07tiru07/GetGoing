@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
 import CommentModal from './modals/CommentModal.js'
-import RatingModal from './modals/RatingModal.js'
+import RatingModal from './Rating2Modal.js'
 
 const cards = [
     {

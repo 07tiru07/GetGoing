@@ -16,7 +16,7 @@ const Rating2Modal = (props) => {
         <>
             <Modal show={show} onHide={handleClose} animation={false}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Please enter your rating</Modal.Title>
+                    <Modal.Title>Once people rate your hosted events, overall rating will show up here</Modal.Title>
                 </Modal.Header>
                 <Modal.Body><InputGroup className="mb-1">
                 <StarRatings
@@ -30,10 +30,7 @@ const Rating2Modal = (props) => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
-                        Submit
-            </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Cancel
+                        Ok,I got it
             </Button>
                 </Modal.Footer>
             </Modal>
