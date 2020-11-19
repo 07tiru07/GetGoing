@@ -1,33 +1,34 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
 import {Button, Card, Row} from "react-bootstrap";
 import JoinEventModal from './modals/JoinEventModal.js'
 import CreateEventModal from "./modals/CreateEventModal";
+import {connect} from "react-redux";
+import {setSport} from "./store/actions";
 
 const cards = [
     {
-        title: "Bicycle",
+        title: "with friends",
         date: "01/01/2020",
         type: "online",
         location: "Punjab, India",
         places: "15",
     },
     {
-        title: "Football",
+        title: "for beginners",
         date: "02/02/2020",
         type: "offline",
         location: "Kazan, Russia",
         places: "152",
     },
     {
-        title: "Running",
+        title: "Sirius AIM",
         date: "03/03/2020",
         type: "online",
         location: "Delhi, India",
         places: "32",
     },
     {
-        title: "Running",
+        title: "Sport date",
         date: "05/04/2020",
         type: "offline",
         location: "Punjab, India",
@@ -36,18 +37,21 @@ const cards = [
 ]
 
 
-const Events = () => {
+const Events = ({selected_sport, setSport}) => {
     const [state, setState] = useState({joinModal: false, createModal: false})
 
     return (
         <div className="container py-1">
-            <Button onClick={() => setState({...state, createModal: true})} variant="outline-primary"
-                    className="py-3 my-3 w-100" style={{minWidth: 300}}>Create my own event</Button>
+            <div className="d-flex col-12 col-md-8 px-0 my-3">
+                <h3>{selected_sport}</h3>
+                <Button onClick={() => setState({...state, createModal: true})} className="w-50 ml-5"
+                        variant="outline-primary">Create my own event</Button>
+            </div>
             <Row>
                 {cards.map((card, index) => (<div key={index} className="col-md-6 p-1">
                     <Card>
                         <Card.Header>
-                            {card.title}
+                            {selected_sport+" "+card.title}
                         </Card.Header>
                         <Card.Body>
                             <Card.Text>
@@ -64,8 +68,11 @@ const Events = () => {
                             </Card.Text>
                             <div className="d-flex col-12 col-md-8 px-0">
 
-                            <Button className="w-50" onClick={() => setState({...state, joinModal: true})} style={{marginRight: 15}}
-                                    variant="primary">Join</Button>
+                                <Button className="w-50" onClick={() => {
+                                    //add about submit events
+                                    setState({...state, joinModal: true});
+                                }} style={{marginRight: 15}}
+                                        variant="primary">Join</Button>
                                 <Button className="w-50" variant="primary">Recommend</Button>
                             </div>
                         </Card.Body>
@@ -86,4 +93,12 @@ const Events = () => {
     );
 };
 
-export default Events;
+const mapStateToProps = (state) => ({
+    selected_sport: state.selected_sport
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    setSport: (sport) => dispatch(setSport(sport))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Events);

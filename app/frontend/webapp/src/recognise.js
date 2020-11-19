@@ -45,7 +45,7 @@ const Recognise = () => {
         </Col>
         
         <Col sm={5}>
-          <Certificate2 height={600g} width={600} />
+          <Certificate2 height={600} width={600} />
           <Button variant="primary" size="lg" block>
             CLAIM YOUR CERTIFICATES!!!
                          </Button>
