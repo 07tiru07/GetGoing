@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Container, Row, Col, Alert, ButtonGroup, ButtonToolbar } from "react-bootstrap";
-import { ReactComponent as Certificate1 } from "./Certifiacte1.svg";
-import { ReactComponent as Certificate2 } from "./Certifiacte2.svg";
+import { ReactComponent as Certificate1 } from "./cet1.svg";
+import { ReactComponent as Certificate2 } from "./Cet2.svg";
 import ShareModal from './smodal.js'
 
 const Recognise = () => {
@@ -29,7 +29,7 @@ const Recognise = () => {
       <Row>
         <Col sm={1}> </Col>
         <Col sm={5}>
-          <Certificate1 height={400} width={400} />
+          <Certificate1 height={600} width={600} />
           <Button variant="primary" size="lg" block>
             CLAIM YOUR CERTIFICATES!!!
                          </Button>
@@ -45,7 +45,7 @@ const Recognise = () => {
         </Col>
         
         <Col sm={5}>
-          <Certificate2 height={400} width={400} />
+          <Certificate2 height={600g} width={600} />
           <Button variant="primary" size="lg" block>
             CLAIM YOUR CERTIFICATES!!!
                          </Button>
