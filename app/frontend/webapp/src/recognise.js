@@ -8,7 +8,7 @@ const Recognise = () => {
 
   const [showSModal, setShowSModal] = useState(false)
   return (
-    <Container fluid>
+    <Container >
       <Row>
         <Col sm={2}>
           <h3> Recognition</h3>
@@ -29,32 +29,31 @@ const Recognise = () => {
       <Row>
         <Col sm={1}> </Col>
         <Col sm={5}>
-          <Certificate1 height={600} width={600} />
-          <Button variant="primary" size="lg" block>
+          <Certificate1 />
+          <Button className="w-75" variant="primary" block>
             CLAIM YOUR CERTIFICATES!!!
                          </Button>
-          <Button
+          <Button className="w-75"
             onClick={() => setShowSModal(true)}
             style={{ marginRight: 15 }}
             variant="secondary"
-            size="lg"
             block
           >
             SHARE WITH OTHERS!!!
                    </Button>
         </Col>
-        
+
         <Col sm={5}>
-          <Certificate2 height={600} width={600} />
-          <Button variant="primary" size="lg" block>
+          <Certificate2  />
+          <Button className="w-75" variant="primary" block>
             CLAIM YOUR CERTIFICATES!!!
                          </Button>
-          <Button
+          <Button className="w-75"
             onClick={() => setShowSModal(true)}
             style={{ marginRight: 15 }}
             variant="secondary"
-            size="lg"
             block
+
           >
             SHARE WITH OTHERS!!!
                    </Button>
