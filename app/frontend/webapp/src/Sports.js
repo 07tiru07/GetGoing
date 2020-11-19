@@ -26,8 +26,12 @@ const cards = [
         text: `Some quick example text to build on the card title and make up the bulk of
   the card's content.`,
         image: volleyballImg
-    }
-    , {
+    }, {
+        title: "Football",
+        text: `Some quick example text to build on the card title and make up the bulk of
+  the card's content.`,
+        image: footballImg
+    }, {
         title: "Hockey",
         text: `Some quick example text to build on the card title and make up the bulk of
   the card's content.`,
@@ -56,7 +60,7 @@ const Sports = ({setSport}) => {
                             </Card.Text>
 
                             <Link to="/events" onClick={() => setSport(card.title)}>
-                            <Button style={{marginRight: 20}}
+                                <Button style={{marginRight: 20}}
                                         variant="primary">Events</Button>
                             </Link>
                             <Link to="/lessons">

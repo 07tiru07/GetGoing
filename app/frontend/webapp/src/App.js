@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import MastHead from "./MastHead";
 import Home from "./Home";
 import Sports from "./Sports";
+import Fitness from "./Fitness";
 import Events from "./Events"
 import Lessons from "./Lessons";
 import Register from "./Register";
@@ -35,6 +36,9 @@ const App = () => {
                 </Route>
                 <Route path="/sports">
                     <Sports/>
+                </Route>
+                <Route path="/fitness">
+                    <Fitness/>
                 </Route>
                 <Route path="/login">
                     <Login/>
