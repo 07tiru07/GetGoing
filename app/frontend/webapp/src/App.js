@@ -5,7 +5,8 @@ import MastHead from "./MastHead";
 import Home from "./Home";
 import Sports from "./Sports";
 import Fitness from "./Fitness";
-import Events from "./Events"
+import Events from "./Events";
+import Recognise from "./recognise";
 import Lessons from "./Lessons";
 import Register from "./Register";
 import Login from "./Login";
@@ -48,6 +49,9 @@ const App = () => {
                 </Route>
                 <Route path="/rewards">
                     <Rewards/>
+                </Route>
+                <Route path="/recognise">
+                    <Recognise/>
                 </Route>
                 <Route path="/created_events">
                     <CreatedEvents/>

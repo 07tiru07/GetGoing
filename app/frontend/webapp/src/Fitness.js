@@ -1,12 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {Button, Card, Row} from "react-bootstrap";
-import bicycleImg from './rec/bicycle.jpg'
-import basketballImg from './rec/basketball.jpg'
-import volleyballImg from './rec/volleyball.jpeg'
-import footballImg from './rec/football.jpeg'
-import hockeyImg from './rec/hockey.jpg'
-import runningImg from './rec/running.jpg'
+import bicycleImg from './rec/yoga.jpg'
 import {setSport} from "./store/actions";
 import {connect} from "react-redux";
 
@@ -16,32 +11,7 @@ const cards = [
         text: `Some quick example text to build on the card title and make up the bulk of
   the card's content.`,
         image: bicycleImg
-    }, {
-        title: "Basketball",
-        text: `Some quick example text to build on the card title and make up the bulk of
-  the card's content.`,
-        image: basketballImg
-    }, {
-        title: "Volleyball",
-        text: `Some quick example text to build on the card title and make up the bulk of
-  the card's content.`,
-        image: volleyballImg
-    }, {
-        title: "Football",
-        text: `Some quick example text to build on the card title and make up the bulk of
-  the card's content.`,
-        image: footballImg
-    }, {
-        title: "Hockey",
-        text: `Some quick example text to build on the card title and make up the bulk of
-  the card's content.`,
-        image: hockeyImg
-    }, {
-        title: "Running",
-        text: `Some quick example text to build on the card title and make up the bulk of
-  the card's content.`,
-        image: runningImg
-    },
+    }
 ]
 
 const Sports = ({setSport}) => {
