@@ -19,8 +19,17 @@ const CancelModal = (props) => {
     <p>Once you cancel you cannot host back directly </p>
   </Modal.Body>
     <Modal.Footer>
-    <Button variant="secondary" onClick={handleClose}>Confirm</Button>
-    <Button variant="primary" onClick={handleClose}>Close</Button>
+      
+    <Button
+    className="w-10"
+    variant="primary"
+    style={{ marginRight: 10 }}
+    onClick={handleClose}>Confirm</Button>
+    <Button
+    className="w-10"
+    variant="secondary"
+    style={{ marginRight: 10 }}
+    onClick={handleClose}>Close</Button>
   </Modal.Footer>
 </Modal>
 </>
