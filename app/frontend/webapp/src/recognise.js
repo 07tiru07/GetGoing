@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, Row, Col, Alert, ButtonGroup, ButtonToolbar } from "react-bootstrap";
+import { Button, Container, Row, Col, Alert,} from "react-bootstrap";
 import { ReactComponent as Certificate1 } from "./cet1.svg";
 import { ReactComponent as Certificate2 } from "./Cet2.svg";
 import ShareModal from './smodal.js'
