@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
+import { Button, Card, Row,} from "react-bootstrap";
 import CModal from './modals/CModal.js'
 import InviteModal from './modals/InviteModal.js'
 
@@ -64,14 +64,22 @@ const UpcomingCE = () => {
                             <Card.Text>
                                 {"Seats left: " + card.places}
                             </Card.Text>
-                            <ButtonGroup className="mr-2" aria-label="First group">
-                            <Button onClick={() => setShowCModal(true)} style={{ marginRight: 15 }}
-                                variant="primary">Cancel</Button>
-                                </ButtonGroup>
-                            <ButtonGroup className="mr-2" aria-label="Second group">
-                            <Button onClick={() => setShowInviteModal(true)} style={{ marginRight: 15 }}
-                                    variant="primary">Invite Others</Button>
-                                </ButtonGroup>
+                            <div className="d-flex col-12 col-md-8 px-0">
+                            <Button
+                            className="w-50" 
+                            onClick={() => setShowCModal(true)}
+                            style={{ marginRight: 15 }}
+                            variant="primary">Cancel</Button>
+                                
+                            
+                            <Button
+                            className="w-50"
+                            onClick={() => setShowInviteModal(true)}
+                            style={{ marginRight: 15 }}
+                            variant="primary">Invite Others</Button>
+                            </div>
+                    
+                               
                         </Card.Body>
                     </Card>
                 </div>))}

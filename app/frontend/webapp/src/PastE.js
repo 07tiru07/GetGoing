@@ -58,22 +58,23 @@ const PastE = () => {
                 name='rating'
               />
                 </InputGroup>
-
-
-              <div className="col-12 d-flex py-3">
+                <div className="d-flex col-12 col-md-8 px-0">
               <button
                       type="button"
                       id=""
-                      className="btn w-33 btn-primary text-truncate"
+                      variant="primary"
+                      className="btn w-50 btn-primary text-truncate"
                     //   style={{width: "100px"}}
                     onClick={() => setShowComment2Modal(true)} style={{ marginRight: 15 }}
                     >
                       Comment
+                            
                     </button>
                     <button
                       type="button"
                       id=""
-                      className="btn w-33 btn-primary text-truncate"
+                      variant="primary"
+                      className="btn w-50 btn-primary text-truncate"
                     //   style={{width: "100px"}}
                     onClick={() => setShowPastJoinedShareModal(true)} style={{ marginRight: 15 }}
                     >

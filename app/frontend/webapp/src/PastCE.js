@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Card, Row, ButtonGroup,} from "react-bootstrap";
+import { Button, Card, Row,} from "react-bootstrap";
 import CommentModal from './modals/CommentModal.js'
 import RatingModal from './Rating2Modal.js'
 
@@ -64,15 +64,20 @@ const PastCE = () => {
                             <Card.Text>
                                 {"Seats left: " + card.places}
                             </Card.Text>
-                            <ButtonGroup className="mr-2" aria-label="First group">
-                            <Button onClick={() => setShowCommentModal(true)} style={{ marginRight: 15 }}
-                                variant="primary">See Comments</Button>
-                                </ButtonGroup>
-                            <ButtonGroup className="mr-2" aria-label="Second group">
-                            <Button onClick={() => setShowRatingModal(true)} style={{ marginRight: 15 }}
-                                    variant="primary">See Ratings</Button>
-                                </ButtonGroup>
-                        </Card.Body>
+                            <div className="d-flex col-12 col-md-8 px-0">
+                            <Button
+                            className="w-50" 
+                            onClick={() => setShowCommentModal(true)}
+                            style={{ marginRight: 15 }}
+                            variant="primary">See Comments</Button>
+                                
+                            <Button
+                            className="w-50" 
+                            onClick={() => setShowRatingModal(true)}
+                            style={{ marginRight: 15 }}
+                            variant="primary">See Ratings</Button>
+                            </div>
+                      </Card.Body>
                     </Card>
                 </div>))}
             </Row>
