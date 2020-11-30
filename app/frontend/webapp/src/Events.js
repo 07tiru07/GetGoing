@@ -84,12 +84,20 @@ const Events = ({selected_sport, setSport}) => {
                             </Card.Text>
                             <div className="d-flex col-12 col-md-8 px-0">
 
-                                <Button className="w-50" onClick={() => {
+                                <Button
+                                className="w-50"
+                                style={{marginRight: 15}}
+                                variant="primary"
+                                onClick={() => {
                                     //add about submit events
-                                    setState({...state, joinModal: true});
-                                }} style={{marginRight: 15}}
-                                        variant="primary">Join</Button>
-                                <Button className="w-50" variant="primary">Recommend</Button>
+                                        setState({...state, joinModal: true});
+                                    }}
+                                >
+                                    Join</Button>
+                                <Button
+                                className="w-50"
+                                variant="primary">
+                                    Recommend</Button>
                             </div>
                         </Card.Body>
                     </Card>

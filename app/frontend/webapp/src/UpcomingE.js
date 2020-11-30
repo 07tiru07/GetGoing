@@ -42,7 +42,7 @@ const UpcomingE = () => {
     return (
         <div className="container py-1">
             <Row>
-                {cards.map((card, index) => (<div key={index} className="col-md-6 p-1">
+                {cards.map((card, index) => (<div key={index} className="col-md-6 p-1" >
                     <Card>
                         <Card.Header>
                             {card.title}
@@ -60,25 +60,23 @@ const UpcomingE = () => {
                             <Card.Text>
                                 {"Seats left: " + card.places}
                             </Card.Text>
-                            <ButtonGroup className="mr-2" aria-label="First group">
+                            <div className="d-flex col-12 col-md-8 px-0">
                             <Button
-                            type="button"
-                            id=""
-                            className="mb-2"
-                             //   style={{width: "200px"}}
-                            onClick={() => setShowModal(true)} style={{ marginRight: 15 }}
-                            variant="primary">Leave</Button>
-                            </ButtonGroup>
-                            <ButtonGroup className="mr-2" aria-label="Second group">
+                            className="w-50"
+                            style={{marginRight: 15}}
+                            variant="primary"
+                            onClick={() => setShowModal(true)}
+                            >
+                             Leave</Button>
+                            
                             <Button
-                            type="button"
-                            id=""
-                            className="mb-2"
-                             //   style={{width: "100px"}}
+                           className="w-50"
+                            variant="primary"
                             onClick={() => setShowRecoModal(true)}
-                            style={{ marginRight: 15 }}
-                            variant="primary">Recommend</Button>
-                                </ButtonGroup>
+                            >
+                                Recommend</Button>
+                            </div>
+                            
                         </Card.Body>
                     </Card>
                 </div>))}
